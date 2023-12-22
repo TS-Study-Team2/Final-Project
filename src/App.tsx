@@ -1,9 +1,15 @@
+import { ThemeProvider } from 'styled-components';
+
+import GlobalStyle from './styles/globalStyle';
+import { theme } from './styles/theme';
+import Router from '../src/Router.tsx';
+
 function App() {
   return (
-    <>
-      <div></div>
-      <h1>윤서진, 강민서 화이팅</h1>
-    </>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router />
+    </ThemeProvider>
   );
 }
 
