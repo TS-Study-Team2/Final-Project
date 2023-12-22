@@ -1,19 +1,16 @@
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/globalStyle';
 import { theme } from './styles/theme';
+import Router from '../src/Router.tsx';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Div>윤서진, 강민서 화이팅</Div>
+      <Router />
     </ThemeProvider>
   );
 }
 
 export default App;
-
-const Div = styled.div`
-  ${({ theme }) => theme.fonts.body03};
-`;
