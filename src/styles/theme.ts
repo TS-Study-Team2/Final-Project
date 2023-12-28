@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 const colors = {
-  bookWhite: 'FFFFFF',
+  bookWhite: '#FFFFFF',
   bookGrey: '#EAEDEF',
   bookBlack: '#2F2F2F',
   bookSkyBlue: '#33C5EF',
