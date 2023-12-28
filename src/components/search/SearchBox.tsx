@@ -14,6 +14,7 @@ const Div = styled.div`
   justify-content: space-between;
 
   margin: 0 auto;
+  margin-bottom: 5.6rem;
   max-width: 136.1rem;
 `;
 
@@ -36,6 +37,7 @@ const SearchBtn = styled.button`
   background-color: ${({ theme }) => theme.colors.bookSkyBlue};
   color: ${({ theme }) => theme.colors.bookWhite};
   border-radius: 14px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   ${({ theme }) => theme.fonts.body03};
 
