@@ -52,6 +52,10 @@ const Search = () => {
               title={item.title}
               price={item.price}
               publisher={item.publisher}
+              translator={item.translators}
+              datetime={item.datetime}
+              saleprice={item.sale_price}
+              isbn={item.isbn}
             />
           );
         })}
