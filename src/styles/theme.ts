@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'styled-components';
 
 const colors = {
-  bookWhite: 'FFFFFF',
+  bookWhite: '#FFFFFF',
   bookGrey: '#EAEDEF',
   bookBlack: '#2F2F2F',
   bookSkyBlue: '#33C5EF',
@@ -38,7 +38,7 @@ const fonts = {
   body02: FONT({
     family: 'SUIT Variable',
     weight: 400,
-    size: 3,
+    size: 2.2,
     height: 'normal',
   }),
   // 버튼
