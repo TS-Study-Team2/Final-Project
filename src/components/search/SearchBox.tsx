@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 const SearchBox = () => {
   return (
-    <Div>
+    <SerachBoxWrapper>
       <TextField placeholder="책이름을 입력해주세요" />
       <SearchBtn type="button">검색</SearchBtn>
-    </Div>
+    </SerachBoxWrapper>
   );
 };
 
-const Div = styled.div`
+const SerachBoxWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 

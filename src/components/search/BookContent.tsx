@@ -24,9 +24,9 @@ const BookContent = ({
   isbn,
 }: BookContentProps) => {
   return (
-    <Div>
+    <BookContentWrapper>
       <ImgWrapper>
-        <img src={thumbnail} alt={authors.join(',')}></img>
+        <img src={thumbnail} alt={authors.join(',')} />
       </ImgWrapper>
       <Info>
         <Title>{title}</Title>
@@ -62,11 +62,11 @@ const BookContent = ({
           />
         </svg>
       </MoreDetailBtn>
-    </Div>
+    </BookContentWrapper>
   );
 };
 
-const Div = styled.div`
+const BookContentWrapper = styled.div`
   display: flex;
   position: relative;
 
