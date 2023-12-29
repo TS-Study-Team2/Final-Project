@@ -10,7 +10,7 @@ const SearchHeader = ({ text }: SearchHeaderProps) => {
 
 const Header = styled.header`
   margin-bottom: 9.7rem;
-  padding: 3.1rem 0 0 28rem;
+  padding: 3.1rem 0 0 20rem;
   width: 100vw;
   height: 11.2rem;
 

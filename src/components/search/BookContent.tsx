@@ -70,8 +70,7 @@ const Div = styled.div`
   display: flex;
   position: relative;
 
-  margin: 0 auto;
-  margin-top: 1.8rem;
+  margin: 1.8rem auto;
   max-width: 136.1rem;
   height: 28.5rem;
 
