@@ -1,12 +1,7 @@
-import styled from 'styled-components';
+import Header from '../components/main/Header';
 
 const Main = () => {
-  return <Div>윤서진, 강민서 화이팅</Div>;
+  return <Header />;
 };
 
 export default Main;
-
-const Div = styled.div`
-  background-color: ${({ theme }) => theme.colors.bookSkyBlue};
-  ${({ theme }) => theme.fonts.body03};
-`;
