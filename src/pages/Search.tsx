@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { SearchApiData } from '../types/Search';
+import axios from 'axios';
 
 import SearchHeader from '../components/search/SearchHeader';
 import SearchBox from '../components/search/SearchBox';
 import BookContent from '../components/search/BookContent';
+import { SearchApiData } from '../types/Search';
 
 const Search = () => {
   const [books, setBooks] = useState<Array<SearchApiData>>([]);
@@ -17,8 +18,8 @@ const Search = () => {
         Authorization: 'KakaoAK 05f31e137c85cb698b3a0c5510e433ed',
       };
 
-      const response = await fetch(url, { headers });
-      const data = await response.json();
+      const response = await axios.get(url, { headers });
+      const data = response.data;
 
       setBooks(data.documents);
     } catch (error) {
