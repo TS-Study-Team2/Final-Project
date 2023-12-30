@@ -1,24 +1,13 @@
 import styled from 'styled-components';
 import { useState } from 'react';
+import { SearchApiData } from '../types/Search';
 
 import SearchHeader from '../components/search/SearchHeader';
 import SearchBox from '../components/search/SearchBox';
 import BookContent from '../components/search/BookContent';
 
 const Search = () => {
-  const [books, setBooks] = useState<
-    Array<{
-      title: string;
-      thumbnail: string;
-      authors: string[];
-      price: number;
-      publisher: string;
-      translators: string[];
-      datetime: string;
-      sale_price: number;
-      isbn: string;
-    }>
-  >([]);
+  const [books, setBooks] = useState<Array<SearchApiData>>([]);
 
   const handleSearch = async (query: string) => {
     try {
@@ -58,7 +47,7 @@ const Search = () => {
             />
           ))
         ) : (
-          <p>검색 기록이 없어요!</p>
+          <EmptyViewText>검색 기록이 없어요!</EmptyViewText>
         )}
       </SearchContainer>
     </>
@@ -70,6 +59,15 @@ const SearchContainer = styled.div`
   width: 100vw;
   height: 100%;
   min-height: 100vh;
+`;
+
+const EmptyViewText = styled.div`
+  width: 100vw;
+
+  color: lightgrey;
+
+  text-align: center;
+  ${({ theme }) => theme.fonts.body01};
 `;
 
 export default Search;
