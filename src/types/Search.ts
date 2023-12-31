@@ -8,4 +8,5 @@ export interface SearchApiData {
   datetime: string;
   sale_price: number;
   isbn: string;
+  content: string;
 }
