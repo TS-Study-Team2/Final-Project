@@ -1,50 +1,46 @@
-import React from 'react';
 import styled from 'styled-components';
+import { useRecoilValue } from 'recoil';
 
-import { HarryPotter1 } from '../../assets/image/index';
+import { bookDetailState } from '../../states/bookDetail';
 
 const BookDetail = () => {
+  const selectedBook = useRecoilValue(bookDetailState);
+
   return (
     <DetailWrapper>
-      <BookImg alt="책 이미지" src={HarryPotter1} />
+      <BookImg alt="책 이미지" src={selectedBook.thumbnail} />
       <BookDetailContainer>
         <DetailItem>
           <BookKey>제목</BookKey>
-          <BookValue>해리포터</BookValue>
+          <BookValue>{selectedBook.title}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>작가</BookKey>
-          <BookValue>조앤 K.롤링</BookValue>
+          <BookValue>{selectedBook.authors}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>줄거리</BookKey>
-          <BookValue>
-            선과 악의 대립 속에서 평범한 어린 소년이 한 사람의 영웅으로 성장해나가는 보편적인 테마를 바탕으로 빈틈없는
-            소설적 구성과 생생하게 살아 있는 캐릭터, 정교하게 만들어낸 환상의 세계를 접목시킨 21세기의 고전 『해리
-            포터와 마법사의 돌』 20주년 개정판. 해리 포터를 처음 만나는 어린 세대가 20년이 지나 성인의 눈높이에서 읽어도
-            어색함 없이 책을 통해 해리 포터 세계를 경험하며 기쁨을 만끽할 수 있도록 고전의 깊이로 담아냈다. 어둠의 마왕
-            볼드모트
-          </BookValue>
+          <BookValue>{selectedBook.content}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>가격</BookKey>
-          <BookValue>9000</BookValue>
+          <BookValue>{selectedBook.price}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>출판사</BookKey>
-          <BookValue>문학수첩</BookValue>
+          <BookValue>{selectedBook.publisher}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>도서번호</BookKey>
-          <BookValue>"8983927623 9788983927620"</BookValue>
+          <BookValue>{selectedBook.isbn}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>판매여부</BookKey>
-          <BookValue>정상판매</BookValue>
+          <BookValue>{selectedBook.status}</BookValue>
         </DetailItem>
         <DetailItem>
           <BookKey>번역</BookKey>
-          <BookValue>강동혁</BookValue>
+          <BookValue>{selectedBook.translator}</BookValue>
         </DetailItem>
       </BookDetailContainer>
     </DetailWrapper>
