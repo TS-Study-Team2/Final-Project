@@ -38,7 +38,7 @@ const fonts = {
   body02: FONT({
     family: 'SUIT Variable',
     weight: 400,
-    size: 3,
+    size: 2.2,
     height: 'normal',
   }),
   // 버튼
