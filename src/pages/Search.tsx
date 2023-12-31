@@ -20,6 +20,7 @@ const Search = () => {
 
       const response = await axios.get(url, { headers });
       const data = response.data;
+      console.log(data);
 
       setBooks(data.documents);
     } catch (error) {
