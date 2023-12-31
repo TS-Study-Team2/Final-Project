@@ -7,6 +7,8 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.div`
+  position: fixed;
+  width: 100%;
   padding: 3.1rem 0 3.1rem 28rem;
 
   background-color: ${({ theme }) => theme.colors.bookWhite};

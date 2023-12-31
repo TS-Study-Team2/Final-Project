@@ -48,6 +48,12 @@ const fonts = {
     size: 5,
     height: 'normal',
   }),
+  body04: FONT({
+    family: 'SUIT Variable',
+    weight: 400,
+    size: 2,
+    height: 'normal',
+  }),
   // header 텍스트
   heading01: FONT({
     family: 'SUIT Variable',
