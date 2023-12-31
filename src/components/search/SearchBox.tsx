@@ -1,10 +1,22 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 
-const SearchBox = () => {
+interface SearchBoxProps {
+  onSearch: (query: string) => void;
+}
+
+const SearchBox = ({ onSearch }: SearchBoxProps) => {
+  const [data, setdata] = useState('');
+  const handleSearchClick = () => {
+    onSearch(data);
+  };
+
   return (
     <SerachBoxWrapper>
-      <TextField placeholder="책이름을 입력해주세요" />
-      <SearchBtn type="button">검색</SearchBtn>
+      <TextField placeholder="책이름을 입력해주세요" value={data} onChange={(e) => setdata(e.target.value)} />
+      <SearchBtn type="button" onClick={handleSearchClick}>
+        검색
+      </SearchBtn>
     </SerachBoxWrapper>
   );
 };
