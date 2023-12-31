@@ -25,7 +25,7 @@ const HeaderContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
 
-  padding: 0 26.3rem;
+  padding: 3.1rem 14.3rem;
   width: 100%;
 
   background-color: ${({ theme }) => theme.colors.bookWhite};
@@ -37,7 +37,7 @@ const BackBtn = styled.img`
   width: 3.6rem;
   height: 3.9rem;
 
-  margin-right: calc(100% - 56.2rem);
+  margin-right: calc(100% - 73.2rem);
 
   cursor: pointer;
 `;

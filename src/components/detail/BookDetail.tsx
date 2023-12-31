@@ -56,8 +56,9 @@ const DetailWrapper = styled.main`
 
   width: 123rem;
   height: 64.9rem;
-
   padding: 6.2rem 8.7rem;
+  margin-top: 11rem;
+
   background-color: ${({ theme }) => theme.colors.bookWhite};
 `;
 
@@ -81,6 +82,7 @@ const DetailItem = styled.div`
 const BookKey = styled.span`
   width: 11rem;
   margin-right: 0.5rem;
+  
   white-space: nowrap;
   ${({ theme }) => theme.fonts.body05};
 `;
