@@ -29,6 +29,7 @@ export default Carousel;
 
 const CarouselContainer = styled.section`
   display: block;
+  
   padding: 0 2rem;
 `;
 

@@ -22,8 +22,9 @@ const BackgroundDiv = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding-top: 19.9rem;
   width: 100%;
   height: 100vh;
+  padding-top: 19.9rem;
+
   background-color: ${({ theme }) => theme.colors.bookGrey};
 `;

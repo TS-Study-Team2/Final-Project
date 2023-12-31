@@ -15,11 +15,13 @@ export default NextButton;
 const Button = styled.button`
   width: 22rem;
   height: 6.8rem;
+  align-self: center;
+
+  margin-top: 8rem;
+  border-radius: 1.4rem;
+
   background-color: ${({ theme }) => theme.colors.bookSkyBlue};
   color: ${({ theme }) => theme.colors.bookWhite};
 
   ${({ theme }) => theme.fonts.body02};
-  align-self: center;
-  border-radius: 1.4rem;
-  margin-top: 8rem;
 `;

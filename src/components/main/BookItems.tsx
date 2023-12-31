@@ -22,10 +22,11 @@ const BookItemContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
   padding: 2rem 1rem;
+  border-radius: 0.5rem;
 
   background-color: ${({ theme }) => theme.colors.bookWhite};
-  border-radius: 0.5rem;
 `;
 
 const BookImg = styled.img`
