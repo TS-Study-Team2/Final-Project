@@ -55,6 +55,13 @@ const fonts = {
     size: 2,
     height: 'normal',
   }),
+  // 디테일 key 글자
+  body05: FONT({
+    family: 'SUIT Variable',
+    weight: 600,
+    size: 2.5,
+    height: 'normal',
+  }),
   // header 텍스트
   heading01: FONT({
     family: 'SUIT Variable',
