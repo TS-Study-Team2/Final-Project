@@ -1,7 +1,13 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const NextButton = () => {
-  return <Button>들어가기</Button>;
+  const navigate = useNavigate();
+
+  const onClickNextBtn = () => {
+    navigate('./search');
+  };
+  return <Button onClick={onClickNextBtn}>들어가기</Button>;
 };
 
 export default NextButton;

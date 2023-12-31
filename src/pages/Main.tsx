@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Header from '../components/main/Header';
-import BookCarousel from '../components/main/BookCarousel';
+import BookCarousel from '../components/main/bookcarousel';
 import NextButton from '../components/main/NextButton';
 
 const Main = () => {
