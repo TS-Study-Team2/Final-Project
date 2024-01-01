@@ -1,12 +1,30 @@
 import styled from 'styled-components';
 
+import Header from '../components/main/Header';
+import BookCarousel from '../components/main/bookcarousel';
+import NextButton from '../components/main/NextButton';
+
 const Main = () => {
-  return <Div>윤서진, 강민서 화이팅</Div>;
+  return (
+    <>
+      <Header />
+      <BackgroundDiv>
+        <BookCarousel />
+        <NextButton />
+      </BackgroundDiv>
+    </>
+  );
 };
 
 export default Main;
 
-const Div = styled.div`
-  background-color: ${({ theme }) => theme.colors.bookSkyBlue};
-  ${({ theme }) => theme.fonts.body03};
+const BackgroundDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+  padding-top: 19.9rem;
+
+  background-color: ${({ theme }) => theme.colors.bookGrey};
 `;
