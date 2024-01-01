@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import { useSetRecoilState } from 'recoil';
 
-interface BookContentProps {
+import { bookDetailState } from '../../states/bookDetail';
+
+export interface BookContentProps {
   thumbnail: string;
   authors: string[];
   title: string;
@@ -10,6 +14,8 @@ interface BookContentProps {
   datetime: string;
   saleprice: number;
   isbn: string;
+  content: string;
+  status: string;
 }
 
 const BookContent = ({
@@ -22,7 +28,29 @@ const BookContent = ({
   datetime,
   saleprice,
   isbn,
+  content,
+  status,
 }: BookContentProps) => {
+  const setSelectedBook = useSetRecoilState(bookDetailState);
+  const navigate = useNavigate();
+
+  const onClickDetailBtn = () => {
+    navigate('./detail');
+    setSelectedBook({
+      authors,
+      thumbnail,
+      title,
+      price,
+      publisher,
+      translator,
+      datetime,
+      saleprice,
+      isbn,
+      content,
+      status,
+    });
+  };
+
   return (
     <BookContentWrapper>
       <ImgWrapper>
@@ -54,7 +82,7 @@ const BookContent = ({
           <p>{datetime}</p>
         </Detail>
       </Info>
-      <MoreDetailBtn>
+      <MoreDetailBtn onClick={onClickDetailBtn}>
         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="30" viewBox="0 0 320 512">
           <path
             fill="#EAEDEF"

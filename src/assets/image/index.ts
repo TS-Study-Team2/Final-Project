@@ -5,3 +5,4 @@ export { default as HarryPotter4 } from './harrypotter4.jpeg';
 export { default as HarryPotter5 } from './harrypotter5.jpeg';
 export { default as HarryPotter6 } from './harrypotter6.jpeg';
 export { default as HarryPotter7 } from './harrypotter7.jpeg';
+export { default as Arrow } from './arrow.png';

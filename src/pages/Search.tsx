@@ -45,6 +45,8 @@ const Search = () => {
               datetime={item.datetime}
               saleprice={item.sale_price}
               isbn={item.isbn}
+              content={item.contents}
+              status={item.status}
             />
           ))
         ) : (

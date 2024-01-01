@@ -9,4 +9,5 @@ export interface SearchApiData {
   sale_price: number;
   isbn: string;
   contents: string;
+  status: string;
 }
